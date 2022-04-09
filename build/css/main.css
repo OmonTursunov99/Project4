@@ -1,0 +1,263 @@
+/*BASIC ACTIONS*/
+/*COLORS*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+/*BASIC ACTIONS ===> END*/
+/*UNIVERSAL CLASSES*/
+.container {
+  max-width: 1320px;
+  width: 100%;
+  display: block;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.btn {
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 17px;
+  color: #1D3444;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 18px 32px;
+  border-radius: 30px;
+}
+.btn.warning-light {
+  background-color: rgba(245, 138, 7, 0.1);
+  color: #F58A07;
+}
+.btn.warning {
+  background-color: #F58A07;
+  color: #FFFFFF;
+}
+.btn.warning:hover {
+  background-color: rgba(245, 138, 7, 0.1);
+  color: #F58A07;
+}
+.btn:hover {
+  background: #F58A07;
+  color: #FFFFFF;
+}
+
+.column-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.column-3 > * {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(33.3333333333% - 40px);
+  margin-right: 40px;
+}
+.column-3 > *:nth-child(3n+3) {
+  margin-right: 0;
+}
+
+/*UNIVERSAL CLASSES ===> END*/
+/*BASIC CLASSES*/
+.main-header .main-header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+.main-header .main-header-container .main-header-navigations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.main-header .main-header-container .main-header-navigations nav ul {
+  margin: 0;
+  padding: 0;
+}
+.main-header .main-header-container .main-header-navigations nav ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.main-header .main-header-container .main-header-navigations nav ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #394149;
+  padding: 30px 12px;
+  display: block;
+}
+.main-header .main-header-container .main-header-navigations nav ul li a:hover {
+  color: #F58A07;
+}
+.main-header .main-header-container .main-header-navigations > * {
+  margin-right: 24px;
+}
+.main-header .main-header-container .main-header-navigations > *:last-child {
+  margin-right: 0;
+}
+
+/*BASIC CLASSES ===> END*/
+/*OTHER CLASSES*/
+.section-intro {
+  position: relative;
+  min-height: 703px;
+  background-color: #DCEAF5;
+}
+.section-intro .content {
+  padding: 117px 0;
+  max-width: 576px;
+}
+.section-intro .content h1 {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -3px;
+  color: #1D3444;
+  margin-bottom: 12px;
+}
+.section-intro .content strong {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #5B5B5B;
+  display: inline-block;
+  margin-bottom: 32px;
+}
+.section-intro .content .content-button-group {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.section-intro .content .content-button-group > * {
+  margin-right: 24px;
+  margin-bottom: 16px;
+}
+.section-intro .content .content-button-group > *:last-child {
+  margin-right: 0;
+}
+.section-intro .content p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #394149;
+  margin-bottom: 18px;
+}
+.section-intro .content .content-image-group > * {
+  margin-right: 45px;
+  margin-bottom: 16px;
+}
+.section-intro .content .content-image-group > *:last-child {
+  margin-right: 0;
+}
+.section-intro .position-image {
+  position: absolute;
+  bottom: 0;
+  right: 6%;
+}
+
+.section-help {
+  padding: 96px 0;
+}
+.section-help .content h2 {
+  max-width: 735px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -3px;
+  color: #1D3444;
+  margin-bottom: 27px;
+}
+.section-help .content strong {
+  max-width: 735px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #5B5B5B;
+  margin-bottom: 14px;
+}
+.section-help .content .content-card-group .content-card {
+  margin-top: 40px;
+}
+.section-help .content .content-card-group .content-card .content-image {
+  display: inline-block;
+}
+.section-help .content .content-card-group .content-card .content-image img {
+  width: 100%;
+}
+.section-help .content .content-card-group .content-card .content-title {
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 25.56px;
+  color: #0D1317;
+  margin-top: 33px;
+  margin-bottom: 17px;
+}
+.section-help .content .content-card-group .content-card .content-title:hover {
+  color: #F58A07;
+}
+.section-help .content .content-card-group .content-card p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  color: #5B5B5B;
+  margin-bottom: 24px;
+}
+.section-help .content .content-card-group .content-card .content-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+}
+.section-help .content .content-card-group .content-card .content-link span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 17.04px;
+  color: #F58A07;
+  margin-right: 9px;
+}
+.section-help .content .content-card-group .content-card .content-link:hover span {
+  color: #1D3444;
+}
+.section-help .content .content-card-group .content-card .content-link:hover svg path {
+  fill: #1D3444;
+}
+
+/*OTHER CLASSES ===> END*/

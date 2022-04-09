@@ -1,1 +1,247 @@
+/*BASIC ACTIONS*/
 @import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: border-box;
+    font-family: $ff-poppins;
+    transition: 500ms;
+}
+/*BASIC ACTIONS ===> END*/
+
+/*UNIVERSAL CLASSES*/
+.container {
+    max-width: 1320px;
+    width: 100%;
+    display: block;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.btn {
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 17px;
+    color: $dark;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    padding: 18px 32px;
+    border-radius: 30px;
+    &.warning-light {
+        background-color: $lightWarning;
+        color: $warning;
+    }
+    &.warning {
+        background-color: $warning;
+        color: $white;
+        &:hover {
+            background-color: $lightWarning;
+            color: $warning
+        }
+    }
+    &:hover {
+        background: $warning;
+        color: $white;
+    }
+}
+.column-3 {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    & > * {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% / 3 - 40px);
+        margin-right: 40px;
+        &:nth-child(3n+3) {
+            margin-right: 0;
+        }
+    }
+}
+/*UNIVERSAL CLASSES ===> END*/
+
+/*BASIC CLASSES*/
+.main-header {
+    .main-header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        .main-header-logo {
+        
+        }
+        .main-header-navigations {
+            display: flex;
+            align-items: center;
+            nav {
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        list-style-type: none;
+                        display: inline-block;
+                        a {
+                            text-decoration: none;
+                            font-weight: 600;
+                            font-size: 18px;
+                            line-height: 24px;
+                            color: $lightTextColor;
+                            padding: 30px 12px;
+                            display: block;
+                            &:hover {
+                                color: $warning;
+                            }
+                        }
+                    }
+                }
+            }
+            & > * {
+                margin-right: 24px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+/*BASIC CLASSES ===> END*/
+
+/*OTHER CLASSES*/
+.section-intro {
+    position: relative;
+    min-height: 703px;
+    background-color: $lightPrimary;
+    .content {
+        padding: 117px 0;
+        max-width: 576px;
+        h1 {
+            font-weight: 600;
+            font-size: 64px;
+            line-height: 72px;
+            letter-spacing: -3px;
+            color: $dark;
+            margin-bottom: 12px;
+        }
+        strong {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 30px;
+            color: $textColor;
+            display: inline-block;
+            margin-bottom: 32px;
+        }
+        .content-button-group {
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            & > * {
+                margin-right: 24px;
+                margin-bottom: 16px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: $lightTextColor;
+            margin-bottom: 18px;
+        }
+        .content-image-group {
+            & > * {
+                margin-right: 45px;
+                margin-bottom: 16px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .position-image {
+        position: absolute;
+        bottom: 0;
+        right: 6%;
+    }
+}
+.section-help {
+    padding: 96px 0;
+    .content {
+        h2 {
+            max-width: 735px;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 56px;
+            letter-spacing: -3px;
+            color: $dark;
+            margin-bottom: 27px;
+        }
+        strong {
+            max-width: 735px;
+            display: inline-block;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 30px;
+            color: $textColor;
+            margin-bottom: 14px;
+        }
+        .content-card-group {
+            .content-card {
+                margin-top: 40px;
+                .content-image {
+                    display: inline-block;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .content-title {
+                    text-decoration: none;
+                    display: inline-block;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 25.56px;
+                    color: $darkTextColor;
+                    margin-top: 33px;
+                    margin-bottom: 17px;
+                    &:hover {
+                        color: $warning;
+                    }
+                }
+                p {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: $textColor;
+                    margin-bottom: 24px;
+                }
+                .content-link {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    span {
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 17.04px;
+                        color: $warning;
+                        margin-right: 9px;
+                    }
+                    &:hover {
+                        & span {
+                            color: $dark;
+                        }
+                        & svg path {
+                            fill: $dark
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*OTHER CLASSES ===> END*/
