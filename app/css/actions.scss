@@ -1,0 +1,20 @@
+@function checkWidth($w, $c, $m) {
+    $column: $c - 1;
+    $margin: $m * $column;
+    $rW: $w / $c;
+    $rM: $margin / $c;
+    @return calc(#{$rW} - #{$rM});
+}
+
+@mixin unorderedLists {
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style-type: none;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
