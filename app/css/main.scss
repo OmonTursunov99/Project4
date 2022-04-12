@@ -416,6 +416,7 @@
 
 /*OTHER CLASSES*/
 .section-intro {
+    overflow: hidden;
     position: relative;
     min-height: 703px;
     background-color: $lightPrimary;
@@ -706,6 +707,42 @@
                 }
                 &:after {
                     width: 0;
+                }
+            }
+        }
+    }
+    .content-hidden {
+        display: none;
+        .content-card-group {
+            width: 100%;
+            & > * {
+                width: checkWidth(100%, 2, 26px);
+                margin-right: 26px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            .content-card {
+                h3 {
+                    font-weight: 700;
+                    font-size: 36px;
+                    line-height: 50px;
+                    color: $warning;
+                    margin-bottom: 16px;
+                }
+                strong {
+                    display: block;
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 25.56px;
+                    letter-spacing: $letterSpacing;
+                    margin-bottom: 16px;
+                }
+                span {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: $textColor;
                 }
             }
         }
@@ -1171,6 +1208,9 @@
 }
 .section-recurrence-text {
     padding-top: 128px;
+    &.pt-none {
+        padding-top: 0;
+    }
     .content-group {
         align-items: center;
         & > * {
@@ -1507,7 +1547,7 @@
         }
         .content-image {
             .content-img {
-            
+                width: 100%;
             }
         }
     }

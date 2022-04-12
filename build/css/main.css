@@ -502,6 +502,7 @@
 /*BASIC CLASSES ===> END*/
 /*OTHER CLASSES*/
 .section-intro {
+  overflow: hidden;
   position: relative;
   min-height: 703px;
   background-color: #DCEAF5;
@@ -793,6 +794,40 @@
 }
 .section-experience .content-group .content-image:hover:after {
   width: 0;
+}
+.section-experience .content-hidden {
+  display: none;
+}
+.section-experience .content-hidden .content-card-group {
+  width: 100%;
+}
+.section-experience .content-hidden .content-card-group > * {
+  width: calc(50% - 13px);
+  margin-right: 26px;
+}
+.section-experience .content-hidden .content-card-group > *:last-child {
+  margin-right: 0;
+}
+.section-experience .content-hidden .content-card-group .content-card h3 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 50px;
+  color: #F58A07;
+  margin-bottom: 16px;
+}
+.section-experience .content-hidden .content-card-group .content-card strong {
+  display: block;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 25.56px;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+.section-experience .content-hidden .content-card-group .content-card span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  color: #5B5B5B;
 }
 
 .section-business .content {
@@ -1268,6 +1303,9 @@
 .section-recurrence-text {
   padding-top: 128px;
 }
+.section-recurrence-text.pt-none {
+  padding-top: 0;
+}
 .section-recurrence-text .content-group {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1594,6 +1632,10 @@
 .section-longerm .content-group .content-text .content-link:hover svg path {
   fill: #1D3444;
 }
+.section-longerm .content-group .content-image .content-img {
+  width: 100%;
+}
+
 .section-recurrence-content {
   padding: 96px 0 128px;
 }
