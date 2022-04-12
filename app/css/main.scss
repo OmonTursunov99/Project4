@@ -371,11 +371,18 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        p {
+        p,
+        a {
             font-weight: 500;
             font-size: 16px;
             line-height: 24px;
             color: $white;
+            text-decoration: none;
+            display: inline-block;
+            &:hover {
+                color: $warning;
+            }
+            
         }
         & > * {
             margin-right: 31px;
@@ -1562,6 +1569,29 @@
                 color: $textColor;
                 margin-bottom: 24px;
             }
+            em {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 28px;
+                color: $textColor;
+                margin-bottom: 48px;
+                display: inline-block;
+            }
+        }
+    }
+    &.privacy {
+        .content {
+            .content-text {
+                h1 {
+                   margin-bottom: 24px;
+                }
+                h2 {
+                    padding-top: 16px;
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+            }
         }
     }
 }
@@ -1635,6 +1665,95 @@
             letter-spacing: $letterSpacing;
             color: $darkTextColor;
             margin-bottom: 51px;
+        }
+    }
+}
+.section-question {
+    padding: 96px 0;
+    .content {
+        .content-text-group {
+            margin-bottom: 64px;
+            & > * {
+                width: checkWidth(100%, 2, 40px);
+                margin-right: 40px;
+                &:nth-child(even) {
+                    margin-right: 0;
+                }
+            }
+            .content-text {
+                h1 {
+                    font-weight: 600;
+                    font-size: 48px;
+                    line-height: 64px;
+                    color: $dark;
+                    margin-bottom: 24px;
+                    letter-spacing: $letterSpacing;
+                    max-width: 561px;
+                }
+                p {
+                    max-width: 561px;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 30px;
+                    color: $textColor;
+                }
+            }
+            .content-card-group {
+                display: flex;
+                align-items: flex-start;
+                & > * {
+                    margin-right: 76px;
+                    max-width: 270px;
+                    &:nth-child(even) {
+                        margin-right: 0;
+                    }
+                }
+                .content-card {
+                    h2 {
+                        font-weight: 500;
+                        font-size: 24px;
+                        line-height: 30px;
+                        color: $darkTextColor;
+                        margin-bottom: 16px;
+                        letter-spacing: $letterSpacing;
+                    }
+                    address {
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 30px;
+                        color: $textColor;
+                        font-style: normal;
+                        display: inline-block;
+                    }
+                    nav {
+                        @include unorderedLists;
+                        ul {
+                            li {
+                                a {
+                                    font-weight: 500;
+                                    font-size: 18px;
+                                    line-height: 30px;
+                                    color: $textColor;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content-actions {
+            .content-map {
+                iframe {
+                    max-height: 370px;
+                    width: 100%;
+                    height: 100%;
+                    border: 2px solid transparent;
+                    border-radius: 20px;
+                    &:hover {
+                        border-color: $warning;
+                    }
+                }
+            }
         }
     }
 }

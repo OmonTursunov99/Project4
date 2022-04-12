@@ -35,30 +35,52 @@
         </div>
     </div>
 </header>
-<section class="section-form">
+<section class="section-question">
     <div class="container">
         <div class="content">
-            <h2>Apply Now</h2>
-            <form id="fd">
-                <div class="form-group column-2">
+            <div class="content-text-group column-2">
+                <div class="content-text">
+                    <h1>Have a question ? Let’s get in touch with us.</h1>
+                    <p>Fill up the Form  and ou team will get back to within 24 hrs</p>
+                </div>
+                <div class="content-card-group">
+                    <div class="content-card">
+                        <h2>Location</h2>
+                        <address>DLF Cybercity, Bhubaneswar, India, &52050</address>
+                    </div>
+                    <div class="content-card">
+                        <h2>Contact Us</h2>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="tel:+02079932905" target="_blank">020 7993 2905</a>
+                                </li>
+                                <li>
+                                    <a href="mailto:hi@finsweet.com" target="_blank">hi@finsweet.com</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="content-actions column-2">
+                <form id="fd">
                     <label for="firstName" class="form-label">
                         <input class="form-input" type="text" name="firstName" id="firstName" placeholder="First Name" required>
                     </label>
                     <label for="lastName" class="form-label">
                         <input class="form-input" type="text" name="lastName" id="lastName" placeholder="Last Name" required>
                     </label>
-                </div>
-                <div class="form-group column-2">
-                    <label for="emailId" class="form-label">
-                        <input class="form-input" type="email" name="emailId" id="emailId" placeholder="Email Id" required>
+                    <label for="emailAddress" class="form-label">
+                        <input class="form-input" type="email" name="emailAddress" id="emailAddress" placeholder="Email address" required>
                     </label>
-                    <label for="mobileNo" class="form-label">
-                        <input class="form-input" type="tel" name="mobileNo" id="mobileNo" placeholder="Mobile No" required>
-                    </label>
+                    <textarea class="form-textarea" rows="5" placeholder="Type message" required></textarea>
+                    <button class="btn warning" type="submit" form="fd">Submit</button>
+                </form>
+                <div class="content-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.3222161864915!2d69.21848901572413!3d41.25831971194884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8bbe0da01105%3A0x83ab2e159ab60db9!2sYeoju%20Technical%20Institute%20In%20Tashkent!5e0!3m2!1sru!2s!4v1649764004777!5m2!1sru!2s" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <textarea class="form-textarea" rows="9" placeholder="Why do you thing you are good fit for Ether?" required></textarea>
-                <button class="btn warning" type="submit" form="fd">Submit</button>
-            </form>
+            </div>
         </div>
     </div>
 </section>
@@ -143,7 +165,7 @@
         <div class="content-text">
             <p>© All rights reserved – Finsweet</p>
             <div class="content-text">
-                <p>Privacy Policy</p>
+                <a href="/privacy-policy.html">Privacy Policy</a>
                 <p>Terms & Conditions</p>
             </div>
         </div>
