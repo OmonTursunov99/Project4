@@ -60,6 +60,20 @@
         background-color: $white;
         color: $warning;
     }
+    &.title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 26px;
+        color: $darkTextColor;
+        padding: 0;
+        &.active {
+            color: $warning;
+        }
+        &:hover {
+            background: none;
+            color: $warning;
+        }
+    }
     &:hover {
         background: $warning;
         color: $white;
@@ -105,6 +119,71 @@
         &:nth-child(even) {
             margin-right: 0;
         }
+    }
+}
+#fd {
+    .form-label {
+        width: 100%;
+        margin-bottom: 24px;
+        display: block;
+        .form-input {
+            width: 100%;
+            outline: none;
+            display: inline-block;
+            border: 2px solid transparent;
+            border-radius: 27px;
+            background-color: rgba(210, 218, 237, 0.17);
+            padding: 18px 32px 17px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            color: $darkTextColor;
+            &::placeholder {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                color: #9C9C9C;
+            }
+            &:hover,
+            &:focus {
+                border-color: $warning;
+            }
+        }
+    }
+    .form-textarea {
+        width: 100%;
+        outline: none;
+        display: inline-block;
+        border: 2px solid transparent;
+        border-radius: 27px;
+        background-color: rgba(210, 218, 237, 0.17);
+        padding: 18px 32px 17px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: $darkTextColor;
+        &::placeholder {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            color: #9C9C9C;
+        }
+        &:hover,
+        &:focus {
+            border-color: $warning;
+        }
+    }
+    .form-group {
+        & > * {
+            width: checkWidth(100%, 2, 24px);
+            margin-right: 24px;
+            &:nth-child(even) {
+                margin-right: 0;
+            }
+        }
+    }
+    button[type="submit"] {
+        margin-top: 32px;
     }
 }
 /*UNIVERSAL CLASSES ===> END*/
@@ -1483,6 +1562,79 @@
                 color: $textColor;
                 margin-bottom: 24px;
             }
+        }
+    }
+}
+.section-testing {
+    padding: 96px 0 128px;
+    .content {
+        h1 {
+            font-weight: 600;
+            font-size: 64px;
+            line-height: 72px;
+            letter-spacing: $letterSpacing;
+            color: $dark;
+            margin-bottom: 24px;
+        }
+        .content-text-group {
+            .content-text {
+                margin-top: 40px;
+                h2 {
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 30px;
+                    color: $darkTextColor;
+                    letter-spacing: $letterSpacing;
+                    margin-bottom: 16px;
+                }
+                p {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 30px;
+                    color: $textColor;
+                }
+                &.text-center {
+                    text-align: center;
+                }
+            }
+        }
+        .content-card {
+            margin-top: 64px;
+            padding: 64px 94px 69px 68px;
+            background: rgba(193, 228, 255, 0.3);
+            border-radius: 20px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            .content-title {
+                & > * {
+                    margin-bottom: 40px;
+                    display: block;
+                    
+                }
+            }
+            .content-description {
+                p {
+                    max-width: 842px;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: $textColor;
+                }
+            }
+        }
+    }
+}
+.section-form {
+    padding-bottom: 128px;
+    .content {
+        h2 {
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 56px;
+            letter-spacing: $letterSpacing;
+            color: $darkTextColor;
+            margin-bottom: 51px;
         }
     }
 }

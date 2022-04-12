@@ -63,6 +63,20 @@
   background-color: #FFFFFF;
   color: #F58A07;
 }
+.btn.title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 26px;
+  color: #0D1317;
+  padding: 0;
+}
+.btn.title.active {
+  color: #F58A07;
+}
+.btn.title:hover {
+  background: none;
+  color: #F58A07;
+}
 .btn:hover {
   background: #F58A07;
   color: #FFFFFF;
@@ -126,6 +140,114 @@
 }
 .column-2 > *:nth-child(even) {
   margin-right: 0;
+}
+
+#fd .form-label {
+  width: 100%;
+  margin-bottom: 24px;
+  display: block;
+}
+#fd .form-label .form-input {
+  width: 100%;
+  outline: none;
+  display: inline-block;
+  border: 2px solid transparent;
+  border-radius: 27px;
+  background-color: rgba(210, 218, 237, 0.17);
+  padding: 18px 32px 17px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #0D1317;
+}
+#fd .form-label .form-input::-webkit-input-placeholder {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #9C9C9C;
+}
+#fd .form-label .form-input::-moz-placeholder {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #9C9C9C;
+}
+#fd .form-label .form-input:-ms-input-placeholder {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #9C9C9C;
+}
+#fd .form-label .form-input::-ms-input-placeholder {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #9C9C9C;
+}
+#fd .form-label .form-input::placeholder {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #9C9C9C;
+}
+#fd .form-label .form-input:hover, #fd .form-label .form-input:focus {
+  border-color: #F58A07;
+}
+#fd .form-textarea {
+  width: 100%;
+  outline: none;
+  display: inline-block;
+  border: 2px solid transparent;
+  border-radius: 27px;
+  background-color: rgba(210, 218, 237, 0.17);
+  padding: 18px 32px 17px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #0D1317;
+}
+#fd .form-textarea::-webkit-input-placeholder {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #9C9C9C;
+}
+#fd .form-textarea::-moz-placeholder {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #9C9C9C;
+}
+#fd .form-textarea:-ms-input-placeholder {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #9C9C9C;
+}
+#fd .form-textarea::-ms-input-placeholder {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #9C9C9C;
+}
+#fd .form-textarea::placeholder {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #9C9C9C;
+}
+#fd .form-textarea:hover, #fd .form-textarea:focus {
+  border-color: #F58A07;
+}
+#fd .form-group > * {
+  width: calc(50% - 12px);
+  margin-right: 24px;
+}
+#fd .form-group > *:nth-child(even) {
+  margin-right: 0;
+}
+#fd button[type=submit] {
+  margin-top: 32px;
 }
 
 /*UNIVERSAL CLASSES ===> END*/
@@ -1526,6 +1648,76 @@
   line-height: 28px;
   color: #5B5B5B;
   margin-bottom: 24px;
+}
+
+.section-testing {
+  padding: 96px 0 128px;
+}
+.section-testing .content h1 {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -0.03em;
+  color: #1D3444;
+  margin-bottom: 24px;
+}
+.section-testing .content .content-text-group .content-text {
+  margin-top: 40px;
+}
+.section-testing .content .content-text-group .content-text h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  color: #0D1317;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+.section-testing .content .content-text-group .content-text p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #5B5B5B;
+}
+.section-testing .content .content-text-group .content-text.text-center {
+  text-align: center;
+}
+.section-testing .content .content-card {
+  margin-top: 64px;
+  padding: 64px 94px 69px 68px;
+  background: rgba(193, 228, 255, 0.3);
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.section-testing .content .content-card .content-title > * {
+  margin-bottom: 40px;
+  display: block;
+}
+.section-testing .content .content-card .content-description p {
+  max-width: 842px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  color: #5B5B5B;
+}
+
+.section-form {
+  padding-bottom: 128px;
+}
+.section-form .content h2 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.03em;
+  color: #0D1317;
+  margin-bottom: 51px;
 }
 
 /*OTHER CLASSES ===> END*/
