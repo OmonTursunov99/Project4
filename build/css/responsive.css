@@ -1,5 +1,25 @@
 /*COLORS*/
 /*LETTER_SPACING*/
+@-webkit-keyframes spinnerAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinnerAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 @media (max-width: 1440px) and (min-width: 1161px) {
   .container {
     max-width: 1020px;
@@ -69,9 +89,6 @@
     /*CONTACT PAGE*/
     /*PRIVACY_POLICY PAGE*/
     /*SERVICES PAGE*/
-  }
-  .media .main-header {
-    padding: 12px 0;
   }
   .media .main-header .main-header-container .main-header-navigations > * {
     margin-right: 12px;
@@ -359,6 +376,9 @@
   }
   .media .main-header .main-header-container .main-header-navigations nav ul li a {
     padding: 15px 10px;
+  }
+  .media .main-header .main-header-media-button {
+    display: block;
   }
   .media .main-footer .content-group .content-actions {
     margin-bottom: 24px;
@@ -699,6 +719,9 @@
   }
   .media .main-header .main-header-container .main-header-navigations nav ul li a {
     padding: 15px 10px;
+  }
+  .media .main-header .main-header-media-button {
+    display: block;
   }
   .media .main-footer {
     padding: 50px 0;
@@ -1183,6 +1206,9 @@
   }
   .media .main-header .main-header-container .main-header-navigations nav ul li a {
     padding: 15px 10px;
+  }
+  .media .main-header .main-header-media-button {
+    display: block;
   }
   .media .main-footer {
     padding: 50px 0;
@@ -1677,6 +1703,9 @@
   }
   .media .main-header .main-header-container .main-header-navigations nav ul li a {
     padding: 15px 10px;
+  }
+  .media .main-header .main-header-media-button {
+    display: block;
   }
   .media .main-footer {
     padding: 50px 0;

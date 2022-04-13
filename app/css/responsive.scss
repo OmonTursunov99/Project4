@@ -96,7 +96,6 @@
     .media {
         /*BASIC CLASSES*/
         .main-header {
-            padding: 12px 0;
             .main-header-container {
                 .main-header-navigations {
                     & > *  {
@@ -519,6 +518,9 @@
                         }
                     }
                 }
+            }
+            .main-header-media-button {
+                display: block;
             }
         }
         .main-footer {
@@ -993,6 +995,9 @@
                         }
                     }
                 }
+            }
+            .main-header-media-button {
+                display: block;
             }
         }
         .main-footer {
@@ -1588,6 +1593,9 @@
                         }
                     }
                 }
+            }
+            .main-header-media-button {
+                display: block;
             }
         }
         .main-footer {
@@ -2194,6 +2202,9 @@
                         }
                     }
                 }
+            }
+            .main-header-media-button {
+                display: block;
             }
         }
         .main-footer {
