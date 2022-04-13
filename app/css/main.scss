@@ -686,6 +686,7 @@
                 width: 100%;
                 border-radius: 20px;
                 filter: grayscale(100%);
+                display: block;
             }
             .position-image {
                 position: absolute;
@@ -705,33 +706,30 @@
     }
     .content-hidden {
         display: none;
-        .content-card-group {
-            width: 100%;
-            & > * {
-                @include createWidth(100%, 2, 26px)
+        & > * {
+            @include createWidth(100%, 2, 26px)
+        }
+        .content-card {
+            h3 {
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 50px;
+                color: $warning;
+                margin-bottom: 16px;
             }
-            .content-card {
-                h3 {
-                    font-weight: 700;
-                    font-size: 36px;
-                    line-height: 50px;
-                    color: $warning;
-                    margin-bottom: 16px;
-                }
-                strong {
-                    display: block;
-                    font-weight: 600;
-                    font-size: 24px;
-                    line-height: 25.56px;
-                    letter-spacing: $letterSpacing;
-                    margin-bottom: 16px;
-                }
-                span {
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 28px;
-                    color: $textColor;
-                }
+            strong {
+                display: block;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 25.56px;
+                letter-spacing: $letterSpacing;
+                margin-bottom: 16px;
+            }
+            span {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 28px;
+                color: $textColor;
             }
         }
     }
@@ -816,6 +814,7 @@
                     width: 100%;
                     border-radius: 20px;
                     filter: grayscale(100%);
+                    display: block;
                 }
                 &:hover {
                     .content-img {
@@ -929,6 +928,7 @@
             .content-img {
                 width: 100%;
                 filter: grayscale(100%);
+                display: block;
                 &:hover {
                     filter: grayscale(0)
                 }
@@ -1239,6 +1239,7 @@
                 width: 100%;
                 border-radius: 20px;
                 filter: grayscale(100%);
+                display: block;
             }
             &:before {
                 content: "";
@@ -1456,6 +1457,39 @@
 .section-longerm {
     padding: 128px 0;
     background-color: $lightPrimary;
+    .content-hidden {
+        display: none;
+        .content-card {
+            display: flex;
+            align-items: center;
+            .content-card-img {
+                border-radius: 50%;
+                margin-right: 8px;
+                margin-bottom: 24px;
+                display: inline-block;
+            }
+            span {
+                display: inline-block;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 32px;
+                color: $lightTextColor;
+                margin-right: 24px;
+                margin-bottom: 24px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        h1 {
+            font-weight: 600;
+            font-size: 64px;
+            line-height: 72px;
+            color: $dark;
+            letter-spacing: $letterSpacing;
+            margin-bottom: 24px;
+        }
+    }
     .content-group {
         align-items: center;
         .content-text {
@@ -1522,6 +1556,7 @@
         .content-image {
             .content-img {
                 width: 100%;
+                display: block;
             }
         }
     }
@@ -1532,6 +1567,7 @@
         .content-img {
             width: 100%;
             margin-bottom: 80px;
+            display: block;
         }
         .content-text {
             max-width: 752px;
