@@ -618,11 +618,7 @@
     .content-group {
         align-items: center;
         & > * {
-            width: checkWidth(100%, 2, 47px);
-            margin-right: 47px;
-            &:last-child {
-                margin-right: 0;
-            }
+            @include createWidth(100%, 2, 47px)
         }
         .content-text {
             h2 {
@@ -643,11 +639,7 @@
             .content-card-group {
                 width: 100%;
                 & > * {
-                    width: checkWidth(100%, 2, 26px);
-                    margin-right: 26px;
-                    &:last-child {
-                        margin-right: 0;
-                    }
+                    @include createWidth(100%, 2, 26px)
                 }
                 .content-card {
                     h3 {
@@ -716,11 +708,7 @@
         .content-card-group {
             width: 100%;
             & > * {
-                width: checkWidth(100%, 2, 26px);
-                margin-right: 26px;
-                &:last-child {
-                    margin-right: 0;
-                }
+                @include createWidth(100%, 2, 26px)
             }
             .content-card {
                 h3 {
@@ -1083,11 +1071,7 @@
     .content-group {
         align-items: center;
         & > * {
-            width: checkWidth(100%, 2, 46px);
-            margin-right: 46px;
-            &:nth-child(even) {
-                margin-right: 0;
-            }
+            @include createWidth(100%, 2, 46px)
         }
         .content-text {
             h1 {
@@ -1119,7 +1103,9 @@
                 border-radius: 20px;
                 filter: grayscale(100%);
                 overflow: hidden;
-                
+                max-height: 650px;
+                line-height: 0;
+                display: block;
             }
             &:after {
                 content: "";
@@ -1159,11 +1145,7 @@
     .content-text-group {
         padding-bottom: 64px;
         & > * {
-            width: checkWidth(100%, 2, 72px);
-            margin-right: 72px;
-            &:nth-child(even) {
-                margin-right: 0;
-            }
+            @include createWidth(100%, 2, 72px)
         }
         h2 {
             font-weight: 600;
@@ -1214,11 +1196,7 @@
     .content-group {
         align-items: center;
         & > * {
-            width: checkWidth(100%, 2, 79px);
-            margin-right: 79px;
-            &:nth-child(even) {
-                margin-right: 0;
-            }
+            @include createWidth(100%, 2, 79px)
         }
         .content-text {
             h2 {
@@ -1361,11 +1339,7 @@
         }
         .content-card-group {
             & > * {
-                width: checkWidth(100%, 4, 40px);
-                margin-right: 40px;
-                &:nth-child(4n + 4) {
-                    margin-right: 0;
-                }
+                @include createWidth(100%, 4, 40px)
             }
             .content-card {
                 margin-top: 40px;
@@ -1714,11 +1688,7 @@
         .content-text-group {
             margin-bottom: 64px;
             & > * {
-                width: checkWidth(100%, 2, 40px);
-                margin-right: 40px;
-                &:nth-child(even) {
-                    margin-right: 0;
-                }
+                @include createWidth(100%, 2, 40px)
             }
             .content-text {
                 h1 {

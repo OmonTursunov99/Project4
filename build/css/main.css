@@ -708,7 +708,7 @@
   width: calc(50% - 23.5px);
   margin-right: 47px;
 }
-.section-experience .content-group > *:last-child {
+.section-experience .content-group > *:nth-child(2n+2) {
   margin-right: 0;
 }
 .section-experience .content-group .content-text h2 {
@@ -733,7 +733,7 @@
   width: calc(50% - 13px);
   margin-right: 26px;
 }
-.section-experience .content-group .content-text .content-card-group > *:last-child {
+.section-experience .content-group .content-text .content-card-group > *:nth-child(2n+2) {
   margin-right: 0;
 }
 .section-experience .content-group .content-text .content-card-group .content-card h3 {
@@ -805,7 +805,7 @@
   width: calc(50% - 13px);
   margin-right: 26px;
 }
-.section-experience .content-hidden .content-card-group > *:last-child {
+.section-experience .content-hidden .content-card-group > *:nth-child(2n+2) {
   margin-right: 0;
 }
 .section-experience .content-hidden .content-card-group .content-card h3 {
@@ -1189,7 +1189,7 @@
   width: calc(50% - 23px);
   margin-right: 46px;
 }
-.section-recurrence-intro .content-group > *:nth-child(even) {
+.section-recurrence-intro .content-group > *:nth-child(2n+2) {
   margin-right: 0;
 }
 .section-recurrence-intro .content-group .content-text h1 {
@@ -1222,6 +1222,9 @@
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   overflow: hidden;
+  max-height: 650px;
+  line-height: 0;
+  display: block;
 }
 .section-recurrence-intro .content-group .content-image:after {
   content: "";
@@ -1261,7 +1264,7 @@
   width: calc(50% - 36px);
   margin-right: 72px;
 }
-.section-experience-text .content-text-group > *:nth-child(even) {
+.section-experience-text .content-text-group > *:nth-child(2n+2) {
   margin-right: 0;
 }
 .section-experience-text .content-text-group h2 {
@@ -1315,7 +1318,7 @@
   width: calc(50% - 39.5px);
   margin-right: 79px;
 }
-.section-recurrence-text .content-group > *:nth-child(even) {
+.section-recurrence-text .content-group > *:nth-child(2n+2) {
   margin-right: 0;
 }
 .section-recurrence-text .content-group .content-text h2 {
@@ -1796,7 +1799,7 @@
   width: calc(50% - 20px);
   margin-right: 40px;
 }
-.section-question .content .content-text-group > *:nth-child(even) {
+.section-question .content .content-text-group > *:nth-child(2n+2) {
   margin-right: 0;
 }
 .section-question .content .content-text-group .content-text h1 {

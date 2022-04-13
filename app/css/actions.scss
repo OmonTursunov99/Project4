@@ -18,3 +18,11 @@
         }
     }
 }
+
+@mixin createWidth($w, $c, $m) {
+    width: checkWidth($w, $c, $m);
+    margin-right: $m;
+    &:nth-child(#{$c}n+#{$c}) {
+        margin-right: 0;
+    }
+}
