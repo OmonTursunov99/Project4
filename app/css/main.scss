@@ -10,6 +10,10 @@
     font-family: $ff-poppins;
     transition: 500ms;
     scroll-behavior: smooth !important;
+    &:after,
+    &:before {
+        transition: 500ms;
+    }
 }
 body {
     position: relative;
@@ -166,6 +170,7 @@ body {
         font-size: 16px;
         line-height: 19px;
         color: $darkTextColor;
+        resize: none;
         &::placeholder {
             font-weight: 500;
             font-size: 16px;
@@ -297,7 +302,7 @@ body {
                             &:hover {
                                 color: $warning;
                             }
-                            &.activePath {
+                            &.active {
                                 color: $warning;
                             }
                         }
@@ -319,6 +324,7 @@ body {
                 border: none;
                 background: none;
                 position: relative;
+                cursor: pointer;
                 &:after {
                     content: "";
                     position: absolute;
@@ -384,7 +390,7 @@ body {
                             &:hover {
                                 color: $warning;
                             }
-                            &.activePath {
+                            &.active {
                                 color: $warning;
                             }
                         }
@@ -495,7 +501,7 @@ body {
                             &:active {
                                 color: $lightWarning;
                             }
-                            &.activePath {
+                            &.active {
                                 color: $warning;
                             }
                         }
@@ -536,6 +542,11 @@ body {
                     &:focus {
                         border-color: $warning;
                     }
+                }
+            }
+            .btn {
+                &:hover {
+                    background: none;
                 }
             }
         }
@@ -982,6 +993,7 @@ body {
             justify-content: space-between;
             .content-text {
                 max-width: 572px;
+                display: none;
                 h2 {
                     font-weight: 600;
                     font-size: 48px;
@@ -1025,6 +1037,9 @@ body {
                             fill: $lightWarning
                         }
                     }
+                }
+                &.active {
+                    display: block;
                 }
             }
             .content-image {
@@ -1459,7 +1474,7 @@ body {
             .content-img {
                 width: 100%;
                 border-radius: 20px;
-                filter: grayscale(100%);
+                filter: grayscale(1);
                 display: block;
             }
             &:before {
@@ -1911,16 +1926,20 @@ body {
                 & > * {
                     margin-bottom: 40px;
                     display: block;
-                    
                 }
             }
             .content-description {
+                display: none;
                 p {
                     max-width: 842px;
                     font-weight: 500;
                     font-size: 16px;
                     line-height: 28px;
                     color: $textColor;
+                    margin-bottom: 24px;
+                }
+                &.active {
+                    display: block;
                 }
             }
         }
@@ -2011,7 +2030,6 @@ body {
         .content-actions {
             .content-map {
                 iframe {
-                    max-height: 370px;
                     width: 100%;
                     height: 100%;
                     border: 2px solid transparent;
@@ -2021,6 +2039,9 @@ body {
                     }
                 }
             }
+        }
+        button[type = "submit"] {
+            margin-top: 32px;
         }
     }
 }
