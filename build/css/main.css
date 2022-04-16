@@ -1728,6 +1728,15 @@ body {
   filter: grayscale(1);
   display: block;
 }
+.section-recurrence-text .content-group .content-image .content-img-clone {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  left: 0;
+  z-index: 15;
+}
 .section-recurrence-text .content-group .content-image:before {
   content: "";
   position: absolute;
@@ -1749,9 +1758,8 @@ body {
   height: 110%;
   z-index: 0;
 }
-.section-recurrence-text .content-group .content-image:hover .content-img {
-  -webkit-filter: grayscale(0);
-  filter: grayscale(0);
+.section-recurrence-text .content-group .content-image:hover .content-img-clone {
+  opacity: 1;
 }
 .section-recurrence-text .content-group .content-image.top-left:before {
   bottom: auto;

@@ -1558,6 +1558,15 @@ body {
                 filter: grayscale(1);
                 display: block;
             }
+            .content-img-clone {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                left: 0;
+                z-index: 15;
+            }
             &:before {
                 content: "";
                 position: absolute;
@@ -1579,8 +1588,8 @@ body {
                     height: 110%;
                     z-index: 0;
                 }
-                .content-img {
-                    filter: grayscale(0);
+                .content-img-clone {
+                    opacity: 1;
                 }
             }
             &.top-left {

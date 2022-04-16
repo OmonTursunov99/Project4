@@ -11,8 +11,6 @@ let authButtonMedia = document.querySelector('.main-header-media').querySelector
 let mainAuthModal = document.querySelector('.main-auth-modal');
 let mainModalCloseButton = document.querySelectorAll('.main-modal-close-button');
 let mainModal = document.querySelectorAll('.main-modal');
-let finsweetButton = document.querySelector('.section-finsweet').querySelector('.position-card')
-let mainFinsweetModal = document.querySelector('.main-finsweet-modal');
 
 mainHeaderMediaLinkGroup.forEach(link => {
     let linkPathName = link.pathname;
@@ -100,9 +98,7 @@ let closeModal = () => {
     let sections = document.querySelectorAll('section');
     sections.forEach(item => {
         if(item.classList.contains('section-finsweet')) {
-            let finsweetIframe = document.getElementById('videoIframe');
-            finsweetIframe.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
-            console.log(finsweetIframe.contentWindow)
+            stopVideo();
         }
     })
 }
@@ -116,7 +112,4 @@ authButton.addEventListener('click', () => {
 })
 authButtonMedia.addEventListener('click', () => {
     mainAuthModal.classList.add('active');
-})
-finsweetButton.addEventListener('click', () => {
-    mainFinsweetModal.classList.add('active');
 })

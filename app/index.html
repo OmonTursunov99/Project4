@@ -503,7 +503,7 @@
                 </button>
             </div>
             <div class="main-modal-body">
-                <iframe id="videoIframe" src="https://www.youtube.com/embed/4EfM6rPmxow?list=RDgzBT0_bjUNA" title="YouTube video player" frameborder="0"  allowfullscreen></iframe>
+                <div id="player"></div>
             </div>
             <div class="main-modal-footer">
                 <button class="btn warning main-modal-close-button" type="button">Close</button>
@@ -517,6 +517,32 @@
             </svg>
         </a>
     </div>
+    <script>
+        let tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        let firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        let player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '360',
+                width: '640',
+                videoId: 'M7lc1UVf-VE',
+            });
+        }
+        function stopVideo() {
+            player.stopVideo();
+        }
+
+        let finsweetButton = document.querySelector('.section-finsweet').querySelector('.position-card')
+        let mainFinsweetModal = document.querySelector('.main-finsweet-modal');
+
+        finsweetButton.addEventListener('click', () => {
+            mainFinsweetModal.classList.add('active');
+            player.playVideo();
+        })
+    </script>
     <script src="./js/app.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
