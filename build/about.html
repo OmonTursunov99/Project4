@@ -410,6 +410,15 @@
         mainFinsweetModal.classList.add('active');
         player.playVideo();
     })
+    let sectionRecurrenceTextGroup = document.querySelectorAll('.section-recurrence-text');
+    sectionRecurrenceTextGroup.forEach(item => {
+        let imageBox = item.querySelector('.content-image');
+        let image = item.querySelector('.content-img');
+        let imageClone = image.cloneNode(true);
+        image.classList = 'content-img-clone';
+        imageBox.appendChild(imageClone)
+        console.log(imageClone)
+    })
 </script>
 <script src="./js/app.js"></script>
 </body>
