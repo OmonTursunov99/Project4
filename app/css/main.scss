@@ -274,6 +274,7 @@ body {
     align-items: center;
     transition: 500ms;
     z-index: 2500000;
+    border-bottom: 1px solid $warning;
     .main-header-container {
         display: flex;
         align-items: center;
@@ -640,6 +641,86 @@ body {
     &.active {
         opacity: 1;
         z-index: 25000;
+    }
+}
+.main-modal {
+    position: fixed;
+    top: -150px;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -260000000;
+    opacity: 0;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:after {
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        z-index: -1;
+    }
+    .main-modal-content {
+        max-width: 685px;
+        border-radius: 20px;
+        border: 1px solid $warning;
+        width: 100%;
+        padding: 24px;
+        background-color: $white;
+        .main-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            p {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 30px;
+                color: $textColor;
+                display: inline-block;
+            }
+            .main-modal-close-button {
+                border: none;
+                background: none;
+                padding: 5px;
+                cursor: pointer;
+            }
+        }
+        .main-modal-footer {
+            padding-top: 24px;
+            & > * {
+                margin-right: 8px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    &.active {
+        top: 0;
+        z-index: 260000000;
+        opacity: 1;
+        &:after {
+            background-color: rgba(0,0,0, 0.6);
+        }
+    }
+}
+.main-finsweet-modal {
+    .main-modal-content {
+        .main-modal-body {
+            iframe {
+                min-height: 350px;
+                width: 100%;
+                height: 100%;
+                border: 5px solid $textColor;
+                border-radius: 10px;
+            }
+        }
     }
 }
 /*BASIC CLASSES ===> END*/

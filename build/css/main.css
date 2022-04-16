@@ -373,6 +373,7 @@ body {
   -webkit-transition: 500ms;
   transition: 500ms;
   z-index: 2500000;
+  border-bottom: 1px solid #F58A07;
 }
 .main-header .main-header-container {
   display: -webkit-box;
@@ -768,6 +769,94 @@ body {
 .main-up-button.active {
   opacity: 1;
   z-index: 25000;
+}
+
+.main-modal {
+  position: fixed;
+  top: -150px;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: -260000000;
+  opacity: 0;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.main-modal:after {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: -1;
+}
+.main-modal .main-modal-content {
+  max-width: 685px;
+  border-radius: 20px;
+  border: 1px solid #F58A07;
+  width: 100%;
+  padding: 24px;
+  background-color: #FFFFFF;
+}
+.main-modal .main-modal-content .main-modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.main-modal .main-modal-content .main-modal-header p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #5B5B5B;
+  display: inline-block;
+}
+.main-modal .main-modal-content .main-modal-header .main-modal-close-button {
+  border: none;
+  background: none;
+  padding: 5px;
+  cursor: pointer;
+}
+.main-modal .main-modal-content .main-modal-footer {
+  padding-top: 24px;
+}
+.main-modal .main-modal-content .main-modal-footer > * {
+  margin-right: 8px;
+}
+.main-modal .main-modal-content .main-modal-footer > *:last-child {
+  margin-right: 0;
+}
+.main-modal.active {
+  top: 0;
+  z-index: 260000000;
+  opacity: 1;
+}
+.main-modal.active:after {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.main-finsweet-modal .main-modal-content .main-modal-body iframe {
+  min-height: 350px;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #5B5B5B;
+  border-radius: 10px;
 }
 
 /*BASIC CLASSES ===> END*/

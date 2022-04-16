@@ -6,6 +6,13 @@ let mainLoading = document.querySelector('.main-loading');
 let mainHeaderNavLinksGroup = document.querySelector('.main-header-navigations').querySelectorAll('a');
 let mainHeaderNavMediaLinksGroup = document.querySelector('.main-header-media').querySelector('nav').querySelectorAll('a');
 let mainFooterNavLinksGroup = document.querySelector('.nav-unordered').querySelectorAll('a');
+let authButton = document.querySelector('.main-header-navigations').querySelector('button');
+let authButtonMedia = document.querySelector('.main-header-media').querySelector('button');
+let mainAuthModal = document.querySelector('.main-auth-modal');
+let mainModalCloseButton = document.querySelectorAll('.main-modal-close-button');
+let mainModal = document.querySelectorAll('.main-modal');
+let finsweetButton = document.querySelector('.section-finsweet').querySelector('.position-card')
+let mainFinsweetModal = document.querySelector('.main-finsweet-modal');
 
 mainHeaderMediaLinkGroup.forEach(link => {
     let linkPathName = link.pathname;
@@ -77,10 +84,39 @@ let removeClassNav = () => {
 mainHeaderButton.addEventListener('click', () => {
     toggleClassNav();
 });
-window.addEventListener('click', e => { // при клике в любом месте окна браузера
-    const target = e.target // находим элемент, на котором был клик
-    console.log(!target.closest('#mainHeaderButton'))
-    if (!target.closest('.main-header-media') && !target.closest('#mainHeaderButton')) { // если этот элемент или его родительские элементы не окно навигации и не кнопка
+window.addEventListener('click', e => {
+    const target = e.target
+    if (!target.closest('.main-header-media') && !target.closest('#mainHeaderButton')) {
         removeClassNav();
     }
+    if(!target.closest('.main-modal-content') && !target.closest('.main-modal-open-button')) {
+        closeModal();
+    }
+})
+let closeModal = () => {
+    mainModal.forEach(el => {
+        el.classList.remove('active')
+    })
+    let sections = document.querySelectorAll('section');
+    sections.forEach(item => {
+        if(item.classList.contains('section-finsweet')) {
+            let finsweetIframe = document.getElementById('videoIframe');
+            finsweetIframe.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+            console.log(finsweetIframe.contentWindow)
+        }
+    })
+}
+mainModalCloseButton.forEach(item => {
+    item.addEventListener('click', () => {
+        closeModal();
+    })
+})
+authButton.addEventListener('click', () => {
+    mainAuthModal.classList.add('active');
+})
+authButtonMedia.addEventListener('click', () => {
+    mainAuthModal.classList.add('active');
+})
+finsweetButton.addEventListener('click', () => {
+    mainFinsweetModal.classList.add('active');
 })

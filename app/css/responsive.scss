@@ -1641,6 +1641,9 @@
                 }
             }
         }
+        .main-modal {
+            padding: 24px;
+        }
         /*INDEX PAGE*/
         .section-intro {
             .content {
@@ -2244,6 +2247,17 @@
                 & > * {
                     width: 100%;
                     margin-right: 0;
+                }
+            }
+        }
+        .main-modal {
+            padding: 12px;
+            .main-modal-content {
+                padding: 18px;
+                .main-modal-body {
+                    #fd {
+                    
+                    }
                 }
             }
         }

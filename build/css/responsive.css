@@ -1244,6 +1244,9 @@
     width: 100%;
     margin-right: 0;
   }
+  .media .main-modal {
+    padding: 24px;
+  }
   .media .section-intro .content {
     padding-bottom: 24px;
   }
@@ -1737,6 +1740,12 @@
   .media #fd .form-group.column-2 > * {
     width: 100%;
     margin-right: 0;
+  }
+  .media .main-modal {
+    padding: 12px;
+  }
+  .media .main-modal .main-modal-content {
+    padding: 18px;
   }
   .media .section-intro .content {
     padding-bottom: 24px;
