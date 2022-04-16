@@ -688,7 +688,6 @@ body {
   text-decoration: none;
   display: inline-block;
 }
-.main-footer .content-text p:hover,
 .main-footer .content-text a:hover {
   color: #F58A07;
 }

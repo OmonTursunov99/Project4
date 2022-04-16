@@ -552,10 +552,11 @@ body {
             color: $white;
             text-decoration: none;
             display: inline-block;
+        }
+        a {
             &:hover {
                 color: $warning;
             }
-            
         }
         & > * {
             margin-right: 31px;
